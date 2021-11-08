@@ -1,6 +1,6 @@
 # ULIO
 
-Accessible language learning platform
+Accessible language learning platform built for migrants
 
 ## Install the dependencies
 ```bash
