@@ -1,9 +1,8 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+    @click="toPage"
+    class="full-width q-py-md"
   >
     <q-item-section
       v-if="icon"
@@ -31,9 +30,9 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'EssentialLink',
   props: {
-    link: {
+    slug: {
       type: String,
-      default: '#',
+      default: '/',
     },
     icon: {
       type: String,
@@ -42,6 +41,11 @@ export default defineComponent({
     tooltip: {
       type: String,
       default: '',
+    },
+  },
+  methods: {
+    toPage() {
+      this.$router.push(this.slug);
     },
   },
 });

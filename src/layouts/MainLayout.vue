@@ -4,13 +4,14 @@
     <q-drawer
       show-if-above
       bordered
-      :width="89"
+      :width="91"
     >
       <q-list class="full-height q-py-md flex justify-between">
         <div>
           <div
-            class="self-start full-width text-center"
+            class="self-start full-width text-center cursor-pointer"
             style="border-bottom: 1px solid #bbbbbbbb"
+            @click="$router.push('/')"
           >
             <img
               alt="ULIO logo"
@@ -24,14 +25,13 @@
               v-for="(link, index) in essentialLinks"
               :key="index"
               v-bind="link"
-              class="q-my-md"
             />
           </div>
         </div>
         <EssentialLink
           :icon="'person_outline'"
-          :link="'https://www.google.com'"
-          :tooltip="'Account settings'"
+          :slug="'account'"
+          :tooltip="'Account'"
           class="self-end"
         />
       </q-list>
@@ -48,19 +48,19 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    tooltip: 'Menu book thing idk',
+    tooltip: 'My courses',
     icon: 'menu_book',
-    link: 'https://quasar.dev',
+    slug: 'courses',
   },
   {
     tooltip: 'Analytics',
     icon: 'show_chart',
-    link: 'https://github.com/quasarframework',
+    slug: 'analytics',
   },
   {
     tooltip: 'Help',
     icon: 'help_outline',
-    link: 'https://awesome.quasar.dev',
+    slug: 'help',
   },
 ];
 
