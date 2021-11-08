@@ -9,10 +9,15 @@
       <q-list class="full-height q-py-md flex justify-between">
         <div>
           <div
-            class="self-start full-width text-center q-py-lg"
+            class="self-start full-width text-center"
             style="border-bottom: 1px solid #bbbbbbbb"
           >
-            ULIO
+            <img
+              alt="ULIO logo"
+              src="../../public/icons/favicon-128x128.png"
+              style="width: 90px"
+              type="image/svg+xml"
+            >
           </div>
           <div class="q-mt-md">
             <EssentialLink
