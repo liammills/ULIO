@@ -4,7 +4,7 @@
     <q-drawer
       show-if-above
       bordered
-      :width="80"
+      :width="90"
     >
       <q-list class="full-height q-py-md flex justify-between">
         <div>
