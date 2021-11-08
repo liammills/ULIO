@@ -139,8 +139,8 @@ module.exports = configure((ctx) => ({
     },
 
     manifest: {
-      name: 'Quasar App',
-      short_name: 'Quasar App',
+      name: 'ULIO Platform',
+      short_name: 'ULIO',
       description: 'Accessible language learning platform',
       display: 'standalone',
       orientation: 'portrait',

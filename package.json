@@ -2,10 +2,11 @@
   "name": "ulio",
   "version": "0.0.1",
   "description": "Accessible language learning platform",
-  "productName": "Quasar App",
+  "productName": "ULIO",
   "author": "liammills1 <liam.mills1511@gmail.com>",
   "private": true,
   "scripts": {
+    "start": "quasar dev",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

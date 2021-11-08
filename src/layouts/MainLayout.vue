@@ -1,45 +1,38 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
       show-if-above
       bordered
+      :width="80"
     >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
+      <q-list class="full-height q-py-md flex justify-between">
+        <div>
+          <div
+            class="self-start full-width text-center q-py-lg"
+            style="border-bottom: 1px solid #bbbbbbbb"
+          >
+            logo
+          </div>
+          <div class="q-mt-md">
+            <EssentialLink
+              v-for="(link, index) in essentialLinks"
+              :key="index"
+              v-bind="link"
+              class="q-my-md"
+            />
+          </div>
+        </div>
         <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
+          :icon="'person_outline'"
+          :link="'https://www.google.com'"
+          :tooltip="'Account settings'"
+          class="self-end"
         />
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container style="background-color: #F5F5F8">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -50,50 +43,23 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
+    tooltip: 'Menu book thing idk',
+    icon: 'menu_book',
     link: 'https://quasar.dev',
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
+    tooltip: 'Analytics',
+    icon: 'show_chart',
     link: 'https://github.com/quasarframework',
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
+    tooltip: 'Help',
+    icon: 'help_outline',
     link: 'https://awesome.quasar.dev',
   },
 ];
 
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'MainLayout',
@@ -103,14 +69,8 @@ export default defineComponent({
   },
 
   setup() {
-    const leftDrawerOpen = ref(false);
-
     return {
       essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
     };
   },
 });

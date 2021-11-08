@@ -8,16 +8,20 @@
     <q-item-section
       v-if="icon"
       avatar
+      class="flex flex-center q-pr-none"
     >
-      <q-icon :name="icon" />
+      <q-icon
+        :name="icon"
+        size=32px
+        color=grey-7
+      />
     </q-item-section>
-
-    <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
-        {{ caption }}
-      </q-item-label>
-    </q-item-section>
+    <q-tooltip
+      v-if="tooltip !== ''"
+      class="text-no-wrap no-scroll"
+    >
+      {{tooltip}}
+    </q-tooltip>
   </q-item>
 </template>
 
@@ -27,22 +31,15 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'EssentialLink',
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-
-    caption: {
-      type: String,
-      default: '',
-    },
-
     link: {
       type: String,
       default: '#',
     },
-
     icon: {
+      type: String,
+      default: '',
+    },
+    tooltip: {
       type: String,
       default: '',
     },
