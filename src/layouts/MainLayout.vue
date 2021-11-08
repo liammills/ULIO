@@ -12,7 +12,7 @@
             class="self-start full-width text-center q-py-lg"
             style="border-bottom: 1px solid #bbbbbbbb"
           >
-            logo
+            ULIO
           </div>
           <div class="q-mt-md">
             <EssentialLink
