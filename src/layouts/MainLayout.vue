@@ -9,8 +9,7 @@
       <q-list class="full-height q-py-md flex justify-between">
         <div>
           <div
-            class="self-start full-width text-center cursor-pointer"
-            style="border-bottom: 1px solid #bbbbbbbb"
+            class="self-start full-width text-center cursor-pointer q-mt-lg"
             @click="$router.push('/')"
           >
             <img
@@ -37,7 +36,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container style="background-color: #F5F5F8">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>

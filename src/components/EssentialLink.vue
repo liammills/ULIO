@@ -11,7 +11,7 @@
     >
       <q-icon
         :name="icon"
-        size=32px
+        size=38px
         color=grey-7
       />
     </q-item-section>
