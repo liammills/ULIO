@@ -10,8 +10,8 @@
       <div class="q-gutter-lg q-mb-md">
         <q-input class="input" standout v-model="firstName" label="First name" />
         <q-input class="input" standout v-model="lastName" label="Last name" />
-        <q-input class="input" standout v-model="email" label="Email address" />
-        <q-input class="input" standout v-model="password" label="Password" />
+        <q-input class="input" type="email" standout v-model="email" label="Email address" />
+        <q-input class="input" type="password" standout v-model="password" label="Password" />
       </div>
       <q-btn
         v-ripple
