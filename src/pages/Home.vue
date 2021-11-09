@@ -16,15 +16,15 @@
           flat
           no-caps
           label="Learn a language"
-          class="outlined-btn"
+          class="btn outlined-btn"
         />
         <q-btn
           v-ripple
           flat
           no-caps
           label="Create a course"
-          @click="$router.push('platform')"
-          class="full-btn"
+          @click="$router.push('login')"
+          class="btn full-btn"
         />
       </div>
     </q-page-container>

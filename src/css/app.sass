@@ -8,6 +8,8 @@
     margin: 0 auto
     padding: 60px 40px
 
+.gradient-bg
+    background-image: linear-gradient(to right, $primary, $accent1, $accent2)
 
 // TYPOGRAPHY
 
@@ -25,6 +27,17 @@
     text-align: center
 
     color: #232323
+
+.login-header
+    font-family: Proxima Nova
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 40px
+
+    text-align: center
+
+    color: #FFFDF8
 
 .header1
     font-family: Roboto
@@ -70,7 +83,7 @@
     line-height: 16px
     color: #FFFFFF
 
-.outlined-btn
+.btn
     width: 312px
     border-radius: 50px
     font-family: Roboto
@@ -80,25 +93,34 @@
     line-height: 35px
     text-align: center
 
-    color: #232323
-
+.outlined-btn
+    color: $black
     border: double 5px transparent
     background-image: linear-gradient(white, white), radial-gradient(circle at top left, $primary, $accent1, $accent2)
     background-origin: border-box
     background-clip: padding-box, border-box
 
 .full-btn
-    width: 312px
-    background-image: linear-gradient(to right, $primary, $accent1, $accent2)
-    border-radius: 50px
-    font-family: Roboto
+    background: linear-gradient(to right, $primary, $accent1, $accent2)
+    color: $white
+
+.white-btn
+    background: $white
+    color: $black
+
+.input
+    width: 700px
+    background: #FFFFFF
+    border: 1px solid #DCDCDC
+    box-sizing: border-box
+    border-radius: 14px
+
+    font-family: Proxima Nova
     font-style: normal
     font-weight: bold
-    font-size: 30px
-    line-height: 35px
-    text-align: center
-
-    color: #FFFDF8
+    font-size: 20px
+    line-height: 20px
+    color: #545454
 
 .card
     background: #F8F8F5
