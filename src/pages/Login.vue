@@ -8,10 +8,40 @@
         Sign up to ULIO creators
       </span>
       <div class="q-gutter-lg q-mb-md">
-        <q-input class="input" standout v-model="firstName" label="First name" />
-        <q-input class="input" standout v-model="lastName" label="Last name" />
-        <q-input class="input" type="email" standout v-model="email" label="Email address" />
-        <q-input class="input" type="password" standout v-model="password" label="Password" />
+        <q-input
+          class="input"
+          standout
+          bg-color="transparent"
+          :input-style="{ color: '#545454' }"
+          v-model="firstName"
+          label="First name"
+        />
+        <q-input
+          class="input"
+          standout
+          bg-color="transparent"
+          :input-style="{ color: '#545454' }"
+          v-model="lastName"
+          label="Last name"
+        />
+        <q-input
+          class="input"
+          type="email"
+          standout
+          bg-color="transparent"
+          :input-style="{ color: '#545454' }"
+          v-model="email"
+          label="Email address"
+        />
+        <q-input
+          class="input"
+          type="password"
+          standout
+          bg-color="transparent"
+          :input-style="{ color: '#545454' }"
+          v-model="password"
+          label="Password"
+        />
       </div>
       <q-btn
         v-ripple
