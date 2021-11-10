@@ -16,6 +16,7 @@
           flat
           no-caps
           label="Learn a language"
+          @click="$router.push('join')"
           class="btn outlined-btn"
         />
         <q-btn

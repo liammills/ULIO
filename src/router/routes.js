@@ -11,6 +11,7 @@ const routes = [
     component: () => import('layouts/BlankLayout.vue'),
     children: [
       { path: 'login', component: () => import('pages/Login.vue') },
+      { path: 'join', component: () => import('pages/SignUp.vue') },
     ],
   },
   {
